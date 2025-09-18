@@ -1,0 +1,490 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+
+        .textarea-container {
+            position: relative;
+            width: 300px; /* Adjust as needed */
+        }
+
+        .header {
+            width: 100%;              
+            background: darkblue; /* color */
+            color: white;
+            postion: fixed;
+            left: 0px;
+            right: 0px;
+            height:80px;
+            margin-top: -12px;         
+            border-bottom: 1px solid #ccc;            
+            font-size: 14px;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            gap:8rem;
+        }
+
+        .right {
+            padding: 2px;
+            display: flex;
+            align-items:center;
+            justify-content:left;
+            
+        }
+.right h2{
+            color: darkcyan;
+}
+        .right ul{
+            list-style: none;
+            
+        }
+        .right a{ 
+            text-decoration:none;
+            padding:5px;
+            color: black;
+            
+        }
+#toggleButton {
+    margin: 20px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent; 
+    color: aliceblue;
+}
+
+.popup-menu {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 20%;
+    left: 28%;
+    transform: translate(-50%, -20%);
+    background-color: #fff;
+    color: aliceblue;        
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures it appears above other content */
+    width: 200px;
+    text-align: center;
+}
+.popup-menu a{
+            padding: 10px;
+            
+            font-size: 18px;
+}
+.share-buttons li{
+            padding: 14px;
+            width: fit-content;
+            margin-left: -25%;
+}
+.share-buttons ul{
+            
+}
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    cursor: pointer;
+    color: black;
+    background-color: gray;
+    border-top-right-radius: 5px;
+}
+
+.close-button:hover {
+    color: #000;
+}
+.spacer{
+            border-bottom: 1.5px solid lightgray;
+}
+        .flexright{ 
+            display:flex;
+            justify-content:left;
+            margin-left:-37px;
+        }
+        .flexleft{
+            font-size:18px;
+            display:flex:
+        }
+
+
+        .flexleft i{
+            position:absolute;
+            right:16px;
+            top:20px;
+            font-size:15px;
+            background:transparent;
+            color:black;
+            padding:2px;
+            border-bottom-right-radius:5px;
+            border-top-right-radius:5px;
+        }
+        .flexleft input{
+            font-size:9.3px;
+            border:1px solid gray;
+            outline:none;
+            background:lightgray;
+            height:22px;
+            border-radius:3px;
+            width: 150px; 
+        }
+.flexleft input::focus placeholder {
+            padding: 10px;
+            color: aqua;
+}
+        .bottom h1{
+            margin:10px;
+            font-size:12px;
+            color:gray;
+            border-bottom:1px solid gray;
+            padding-bottom:5px
+            
+        }
+    /*MAIN STYLE*/
+        .main{
+            height: auto;
+        }
+        .welcomebar {
+            color:black;
+            border-radius:8px;
+            position:absolute;
+            height:auto;
+            margin:5px;
+            font-size:8px;
+            font-family: times new roman;
+        }
+        .welcomebar h1{
+            padding:10px;
+            line-height:25px;
+        }
+    /*MINIDASHBOARD*/
+       .minidashboard {
+           position: relative;
+         height: auto;
+         top: 200px;
+       }
+.connect{
+            
+            margin: 7px;
+            background-color: lightcyan;
+            padding-top: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            
+}
+.connect p{
+            padding: 10px;
+            margin-top: 50px;
+            color: indigo;
+            font-style: italic;
+}
+.social-links{
+            padding: 10px;
+            align-content: center;
+            width: fit-content;
+            background-color:  lightyellow;
+            text-align: center;
+            border-radius: 50px;
+            margin-left: 10%;
+            align-items: center;
+            height: fit-content;
+            position: relative;
+            top: 70px;
+}
+.social-links a{
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: Times New Romam;
+            
+}
+.social-links a i{
+            padding-right: 10px;
+            font-size: 18px;
+}
+
+.service{
+            margin-bottom: 100px;
+}
+.service h1{
+            position: relative;
+            top: 200px;
+            margin: 3px;
+            color: burlywood;
+            font-style: italic;
+            text-decoration: underline;
+            margin-left: 20px;
+}
+
+.categ{
+            position: relative;
+            top: 200px;
+            margin: 5px;
+            margin-bottom: 200px;
+}
+.cat{       background-image: images.jpeg;
+            color: whitesmoke;
+            font-size: 16px;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
+}
+.cat a{
+            background-color: whitesmoke;
+            padding: 3px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 15px;
+            color: cornflowerblue;
+            font-style: italic;
+}
+.web {
+  background: 
+  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+  url("https://codetheworld.io/wp-content/uploads/2024/01/bg.jpg");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.logo{
+       background: 
+  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+  url("https://picsum.photos/id/0/5000/3333");
+  color: white;
+  background-size: cover;
+  background-position: center;   
+       
+}
+.flyer{
+    background: 
+  linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+  url("https://picsum.photos/id/119/3264/2176");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.market{
+  background: 
+  linear-gradient( rgba(0, 0, 0, 0.2), rgba(1, 0, 2, 0)),
+  url("https://picsum.photos/id/20/3670/2462");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+/*TEAMBAR STYLE*/
+.teambar {
+         
+}
+.teambar h4{
+            font-size: 18px;
+            font-style: italic;
+}
+.st{
+            flex-direction: : column;
+            justify-content: center;
+            align-items: center;
+}
+.st img {
+  height: 200px;
+  width: 320px;
+text-align: center; 
+margin-left: 20px;            
+}
+.s p{
+  font-size: 16px;   
+  font-style: italic;            
+}
+.s p a{
+     text-decoration: none;
+     font-weight: bold;
+color: green;            
+}
+
+ /*GAMES STYLE*/
+.games{
+       background-color: #032B44;
+       padding: 10px; 
+       margin-bottom: 20px;
+       border-radius: 10px;    
+       border-bottom: 3px solid lightgreen;
+  
+}
+.gy{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-top: -35px;
+            gap: 1rem;
+}
+.gy i{
+            font-size: 35px;
+            color: deepskyblue;
+}
+.gy a{
+            margin-left: 120px;
+            font-size: 12px;
+}
+
+
+.games h5{
+            font-size: 28px;
+            color: white;
+}
+.space{
+            border-bottom: 1.5px solid lightgray;
+            margin-top: -30px;
+            margin-bottom: 30px;
+}
+
+.gs{
+            color: aliceblue;
+}
+.gs i{
+            font-size: 28px;
+            color: greenyellow;
+            padding: 5px;
+}
+.gs a{
+            text-decoration: none;
+            color: whitesmoke;
+            background-color: lightcoral;
+            font-size: 18px;
+            border-radius: 25px;
+            padding: 8px;
+            width: fit-content;
+}
+
+.g{
+            display: flex;
+            align-items: center;
+            gap: rem;
+            padding: 10px;
+            background-color: lightskyblue;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            
+}
+
+.play{
+            display: flex;
+}
+.play a{
+            text-align: right;
+            margin-left: 17px;
+            font-size: 18px;
+            
+}
+
+/**TEMPLATE STYLES**/
+.temp{
+            padding: 10px;
+            border: 3px solid green;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+}
+.temp a{
+            text-decoration: none;
+            background-color: lightblue;
+            color: white;
+            border-radius: 20px;
+            font-size: 16px;
+            padding: 8px;
+}
+.temp h6{
+            font-size: 24px;
+            font-style: italic;
+            margin: 3px;
+}
+.temp p{
+            
+}
+
+/**FOOTER STYLES**/
+.footer{
+            background-color: #032B44;
+            margin-top: 210px;
+            padding: 10px;
+}
+.footer h2{
+            color: white;
+}
+.ads a{
+            color: aliceblue;
+            text-decoration: underlined;
+            font-style: italic;
+}
+.ads p{
+            color: white;
+            font-size: 16px;
+}
+.ft{
+            display: flex;
+            gap: 2rem;
+            
+}
+.ft li{
+            color: aliceblue;
+}
+.ft a{
+            color: aliceblue;
+            text-decoration: none;
+}
+.ft h4{
+            color: grey;
+            font-size: 18px;
+}
+.fs li{
+            color: aliceblue;
+}
+.fs a{
+             color: aliceblue;
+            text-decoration: none;
+}
+.fs h4{
+            color: grey;
+            font-size: 18px;
+}
+
+.cp{
+            color: white;
+            border-left: 2px solid whitesmoke;
+            padding: 3px;
+            margin-left: 100px;
+            margin-top: 30px;
+            font-size: 12px;
+            
+}
+
+.rating {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+    }
+.rating > span {
+      display: inline-block;
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      color: white;
+    }
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+       content: "\2605";
+       position: absolute;
+       color: orange;
+    }
+
+
+

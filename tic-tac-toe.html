@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime-Graphix</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .cell:hover {
+            background-color: #f0f0f0;
+        }
+        .message {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .board{
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <!---HEADER---> 
+        <div class="header">
+            <div class="right">
+                <div class="flexright">
+                    <button id="toggleButton"><i class="fas fa-bars"></i></button>
+                
+                    <div id="popupMenu" class="popup-menu">
+                                <button id="closeButton" class="close-button">&times;</button>
+                                <h2>Prime Graphix</h2>
+                        <div class="spacer"></div>
+                                <!-- Add more content as needed -->
+                                    <!-- Share Buttons -->
+                                <div class="share-buttons">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="service.html">Services</a></li>
+                                        <li><a href="news.html">News</a></li>
+                                        <li><a href="connect.html">Connect</a></li>
+                                        <li><a href="advert.html">Advertise</a></li>
+                                        <li><a href="market.html">MarketPlace</a></li>
+                                        <li><a href="games.html">Games & Fun</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+            
+            <div class="left">
+                <div class="flexleft">
+                    <input type="text" placeholder="Search..." >
+                    <i class="fas fa-search"></i> 
+                </div>
+            </div>       
+            
+        </div>
+        <div class="bottom">
+            <h1>
+               Tic-Tac-Toe
+            </h1>
+        </div>
+        <!---MAIN---> 
+        <div class="main">
+             
+           <h2>Tic-Tac-Toe</h2>
+                  <div class="board" id="board">
+                      <div class="cell" onclick="makeMove(0)"></div>
+                      <div class="cell" onclick="makeMove(1)"></div>
+                      <div class="cell" onclick="makeMove(2)"></div>
+                      <div class="cell" onclick="makeMove(3)"></div>
+                      <div class="cell" onclick="makeMove(4)"></div>
+                      <div class="cell" onclick="makeMove(5)"></div>
+                      <div class="cell" onclick="makeMove(6)"></div>
+                      <div class="cell" onclick="makeMove(7)"></div>
+                      <div class="cell" onclick="makeMove(8)"></div>
+                  </div>
+                  <p class="message" id="message"></p>
+              
+                  <script>
+                      const board = Array(9).fill(null);
+                      let currentPlayer = 'X';
+              
+                      function makeMove(index) {
+                          if (board[index] || checkWinner()) return;
+              
+                          board[index] = currentPlayer;
+                          document.getElementsByClassName('cell')[index].textContent = currentPlayer;
+                          
+                          if (checkWinner()) {
+                              document.getElementById('message').textContent = `${currentPlayer} wins!`;
+                          } else if (board.every(cell => cell)) {
+                              document.getElementById('message').textContent = 'It\'s a draw!';
+                          } else {
+                              currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                          }
+                      }
+              
+                      function checkWinner() {
+                          const winPatterns = [
+                              [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                              [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                              [0, 4, 8], [2, 4, 6]              // Diagonals
+                          ];
+                          return winPatterns.some(pattern => 
+                              board[pattern[0]] &&
+                              board[pattern[0]] === board[pattern[1]] &&
+                              board[pattern[0]] === board[pattern[2]]
+                          );
+                      }
+                  </script>      
+                    
+                  
+                    <div class="temp">
+                       <h6>Templates</h6>
+                       <p>
+                           View our templates that best suits your designs
+                       </p>
+                        
+                        <a href="temp.html">View All</a>
+                     </div>
+                  
+              </div>
+            </div>
+            
+        
+        
+        <!---FOOTER---> 
+        <div class="footer">
+            <img src="images/" alt="logo">
+            <h2>Prime Graphix</h2>
+            <div class="ads">
+                <a href="advert.html">Advertise with Us.</a> 
+                <p>
+                    Increase your sales with Prime Ads. 
+                </p>
+            </div>
+            
+            <div class="ft">
+                <div class="f">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://wa.me/+233554678732">WhatsApp</a></li>
+                        <li><a href="https://www.tiktok.com/@prime_graphix_media">TikTok</a></li>
+                        <li><a href="market.html">MarketPlace</a></li>
+                        <li><a href="connect.html">Affiliates</a></li>
+                    </ul>
+                </div>
+                <div class="f">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li>Help</li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+               <div class="fs">
+                    <h4>Primeverse</h4>
+                    <ul>
+                        <li><a href="pverse.html">Web</a></li>
+                        <li><a href="pverse.html">Ads</a></li>
+                        <li><a href="pverse.html">Blogs</a></li>
+                        <li><a href="pverse.html">Affiliate Markerting</a></li>
+                        <li><a href="pverse.html">Blogs</a></li>
+                    </ul>
+                </div>
+            
+            <div class="cp">
+                Mobi-Tech - © 2025
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
